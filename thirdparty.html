@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet"></link>
+
+    </head>
+    <body>
+		
+	<div class="imgcontainer">
+		<img src="coep.png"  width="800" height="130" > 
+		</div>
+	<div class="a">
+ 	<!-- Button to open the modal login form -->
+	<button onclick="document.getElementById('id01').style.display='block'" class="addscho"><b>Add Scholarship</b></button>
+	</div>
+		<div class="content">
+		<div class="topnav">
+		<a class="active"href="home.html">Home</a>
+		<a href="notice.html">Notices</a>
+		<a href="#contact">Contact Us</a>
+         </div>
+
+
+	<!-- The Modal -->
+	<div id="id01" class="modal">
+  	<span onclick="document.getElementById('id01').style.display='none'"
+	class="close" title="Close Modal">&times;</span>
+
+  	<!-- Modal Content -->
+ 	<form class="modal-content animate" action="thirdparty.jsp">
+
+   	<center> 
+	<center><h1>Add Scholarship</h1></center>
+    	<table>
+
+        <tr>
+            <td><b>Organization Name : </b></td><td><input type="text" name="orgname"></td>
+        </tr>
+	<tr>
+	        <td><b>Caste Criteria : </b></td>
+	    	<td><label class="container">OPEN <input type="checkbox" checked="checked" name="caste"><span class="checkmark"></span></label></td>
+		<tr><td></td><td><label class="container">OBC <input type="checkbox" name="caste" value="OBC,"><span class="checkmark"></span></label></td></tr>
+		<tr><td></td><td><label class="container">SC <input type="checkbox" name="caste" value="SC,"><span class="checkmark"></span></label></td></tr>
+	        <tr><td></td><td><label class="container">ST <input type="checkbox" name="caste" value="ST,"><span class="checkmark"></span></label></td></tr>
+		<tr><td></td><td><label class="container">SBC <input type="checkbox" name="caste" value="SBC,"><span class="checkmark"></span></label></td></tr>
+		<tr><td></td><td><label class="container">VJ <input type="checkbox" name="caste" value="VJ,"><span class="checkmark"></span></label></td></tr>
+		<tr><td></td><td><label class="container">NT-B <input type="checkbox" name="caste" value="NT-B"><span class="checkmark"></span></label></td></tr>
+		<tr><td></td><td><label class="container">NT-C <input type="checkbox" name="caste" value="NT-C"><span class="checkmark"></span></label></td></tr>
+		<tr><td></td><td><label class="container">NT-D <input type="checkbox" name="caste" value="NT-D"><span class="checkmark"></span></label></td></tr>
+	</tr>
+	<center>
+    	<tr>
+       	 	<td><b>CGPA Criteria : </b></td><td><input type="text" name="cgpa"></td>
+    	</tr>
+    	<tr>
+        	<td><b>Income Criteria : </b></td><td><select name="income">
+			<option value ="income0">Select income</option>
+			<option value ="income1">Below 1,00,000</option>
+			<option value ="income2">1,00,000 - 3,00,000</option>
+			<option value ="income3">3,00,000 - 5,00,000</option>
+			<option value ="income4">Above 5,00,000</option>
+    	</tr>
+    	<tr>
+        	<td><b>Upload File :</b> </td><td><input type="file" name="image"></td>
+    	</tr>
+    	</table>
+    
+      	<button type="button" class="subaddscho"><b>Add Scholarship</b></button>&nbsp;&nbsp;      
+	<button type="button" class="cancelbtn"><b>Cancel</b></button>&nbsp;&nbsp;      
+	</div>
+	</center>
+  	</form>
+	</div> 
+     	</div>
+    </body>
+</html>
