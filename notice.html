@@ -1,0 +1,205 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>	
+		.imgcontainer {
+   			text-align: left;
+    			margin: 24px 0 12px 150;
+			
+			}
+		.Login {
+    			display: inline-block;
+  			padding: 15px 32px;
+  			font-size: 19px;
+			margin: -63px 1px;
+  			cursor: pointer;
+  			text-align: center;
+  			text-decoration: none;
+  			outline: none;
+  			color: #fff;
+  			background-color: #4CAF50;
+  			border: none;
+  			border-radius: 15px;
+  			box-shadow: 0 5px #999;
+			}
+		.sublogin {
+    			background-color: #4CAF50;
+    			border: none;
+			border-radius: 15px;
+  			box-shadow: 0 5px #999;
+    			color: white;
+    			padding: 10px 32px;
+    			text-align: center;
+    			text-decoration: none;
+    			display: inline-block;
+    			font-size: 15px;
+    			margin: -47px 1px;
+    			cursor: pointer;
+			}
+		.cancelbtn {
+    			background-color: #4CAF50;
+    			border: none;
+			border-radius: 15px;
+  			box-shadow: 0 5px #999;
+    			color: white;
+    			padding: 10px 20px;
+    			text-align: center;
+    			text-decoration: none;
+    			display: inline-block;
+    			font-size: 15px;
+    			margin: 10px 1px;
+    			cursor: pointer;
+			}
+
+		.content {
+   			max-width: 1000px;
+    			margin: auto;
+			}
+		.topnav {	
+			background-color: #333;
+			overflow: hidden;
+			}
+		.topnav a {
+    			float: left;
+    			color: #f2f2f2;
+    			text-align: center;
+    			padding: 14px 16px;
+    			text-decoration: none;
+    			font-size: 17px;
+			}
+		.topnav a:hover {
+    			background-color: #ddd;
+    			color: black;
+			}
+		.topnav a.active {
+    			background-color: #4CAF50;
+    			color: white;
+			}
+		h1   {color: green;}
+		#play_button {
+    			position:absolute;
+			transition: .5s ease;
+ 			right: 202px;
+    			top: 198px;
+			}
+		
+		.modal {
+  			display: none; /* Hidden by default */
+    			position: fixed; /* Stay in place */
+   		 	z-index: 1; /* Sit on top */
+    			left: 0;
+    			top: 0;
+    			width: 100%; /* Full width */
+    			height: 100%; /* Full height */
+    			overflow: auto; /* Enable scroll if needed */
+    			background-color: rgb(0,0,0); /* Fallback color */
+    			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    			padding-top: 60px;
+			}
+
+			/* Modal Content/Box */
+		.modal-content {
+    			background-color: #fefefe;
+    			margin: 60px auto; /* 15% from the top and centered */
+    			border: 1px solid #888;
+    			width: 80%; /* Could be more or less, depending on screen size */
+			}
+
+			/* The Close Button */
+		.close {
+    			/* Position it in the top right corner outside of the modal */
+    			position: absolute;
+    			right: 25px;
+    			top: 0;
+    			color: #000;
+    			font-size: 35px;
+    			font-weight: bold;
+			}
+
+			/* Close button on hover */
+			.close:hover,
+		.close:focus {
+    			color: red;
+    			cursor: pointer;
+			}
+
+			/* Add Zoom Animation */
+		.animate {
+    			-webkit-animation: animatezoom 0.6s;
+    			animation: animatezoom 0.6s
+			}
+
+		@-webkit-keyframes animatezoom {
+    			from {-webkit-transform: scale(0)}
+    			to {-webkit-transform: scale(1)}
+			}
+
+		@keyframes animatezoom {
+    			from {transform: scale(0)}
+    			to {transform: scale(1)}
+			} 
+		div.a {
+    			position: absolute;
+    			right: 182px;    
+			}
+
+	</style>
+    </head>
+    <body>
+		
+	<div class="imgcontainer">
+		<img src="coep.png"  width="800" height="130" > 
+		</div>
+<div class="a">
+ 	<!-- Button to open the modal login form -->
+	<button onclick="document.getElementById('id01').style.display='block'" class="Login"><b>Login</b></button>
+</div>
+		<div class="content">
+		<div class="topnav">
+		<a href="home.html">Home</a>
+		<a class="active" href="notice.html">Notices</a>
+		<a href="#contact">Contact Us</a>
+         </div>
+
+
+	<!-- The Modal -->
+<div id="id01" class="modal">
+  	<span onclick="document.getElementById('id01').style.display='none'"
+	class="close" title="Close Modal">&times;</span>
+
+  	<!-- Modal Content -->
+ <form class="modal-content animate" action="/action_page.php">
+
+    <div class="imgcontainer">
+      	<img src="coep.png" alt="Avatar" class="avatar" width="700" height="120">
+    </div>
+<center>
+	<h1 style="font-size:40px;"> Scholarship Login </h1>
+    <div class="container">
+      	<label for="uname"><b>Username</b></label>&nbsp;&nbsp;
+      	<input type="text" placeholder="Enter Username" name="uname" required><br /><br />
+
+      	<label for="psw"><b>Password</b></label>&nbsp;&nbsp;
+      	<input type="password" placeholder="Enter Password" name="psw" required><br /><br /><br />
+	<label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      	</label>&nbsp;&nbsp;
+
+      	<button type="submit" class="sublogin"><b>Login</b></button>
+      	<br /><br />
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><b>Cancel</b></button>&nbsp;&nbsp;
+      <span class="psw"><a href="#">Forgot password?</a></span><br /><br />
+    </div>
+</center>
+  </form>
+</div> 
+     </div>
+
+
+    </body>
+</html>
